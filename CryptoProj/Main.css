@@ -1,0 +1,73 @@
+html
+{
+    height: 100%;
+    background: linear-gradient(45deg, #2f1960, #851726);
+
+}
+body
+{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Heading
+{
+    margin: 50px;
+    font-size: 45px;
+    font-family: "Pixelify Sans";
+    color: #ffffff;
+
+}
+.buttons
+{
+    display: flex;
+    flex-direction: column;
+}
+.button
+{
+    padding: 10px;
+    border-color: black;
+    border-style: solid;
+    background: #b60b46;
+    color: #ffffff;
+    font-family: "Pixelify Sans";
+    font-size: 25px;
+    display: flex;
+    cursor: pointer;
+    transition: background 0.5s, color 0.5s;
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+
+}
+a{
+    text-decoration: none;
+}
+
+.button:hover
+{
+    color: #b60b46;
+    background: #ffffff;
+
+}
+
+.button:active
+{
+    opacity: 0.6;
+}
+.images
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.image
+{
+    height: 15%;
+    width: 15%;
+    border: 5px solid #000000;
+    margin: 20px;
+
+}
+

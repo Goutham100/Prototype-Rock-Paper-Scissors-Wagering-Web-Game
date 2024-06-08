@@ -1,0 +1,66 @@
+html {
+  background: linear-gradient(45deg, #2f1960, #851726);
+  height: 100%;
+}
+
+body {
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  display: flex;
+}
+
+.Heading {
+  color: #fff;
+  margin: 50px;
+  font-family: Pixelify Sans;
+  font-size: 45px;
+}
+
+.buttons {
+  flex-direction: column;
+  display: flex;
+}
+
+.button {
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  background: #b60b46;
+  border-style: solid;
+  border-color: #000;
+  margin: 10px;
+  padding: 10px;
+  font-family: Pixelify Sans;
+  font-size: 25px;
+  text-decoration: none;
+  transition: background .5s, color .5s;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button:hover {
+  color: #b60b46;
+  background: #fff;
+}
+
+.button:active {
+  opacity: .6;
+}
+
+.images {
+  flex-direction: row;
+  justify-content: center;
+  display: flex;
+}
+
+.image {
+  border: 5px solid #000;
+  width: 15%;
+  height: 15%;
+  margin: 20px;
+}
+/*# sourceMappingURL=Main.4809ea79.css.map */

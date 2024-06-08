@@ -1,0 +1,41 @@
+html
+{
+    height: 100%;
+    background: linear-gradient(45deg, #2f1960, #851726);
+
+}
+body
+{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.button
+{
+    height: 100px;
+    width: 100px;
+    border-style: solid;
+    border-width: 5px;
+
+}
+.button:active
+{
+    opacity: 0.7;
+}
+#rock
+{
+    background:url("../img/rock.jpg") no-repeat center center;
+    background-size: contain;
+
+}
+#paper
+{
+    background:url("../img/paper.jpg") no-repeat center center;
+    background-size: contain;
+}
+#scissors
+{
+    background:url("../img/scissors.jpg") no-repeat center center;
+    background-size: contain;
+}

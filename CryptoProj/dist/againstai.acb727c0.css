@@ -1,0 +1,35 @@
+html {
+  background: linear-gradient(45deg, #2f1960, #851726);
+  height: 100%;
+}
+
+body {
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  display: flex;
+}
+
+.button {
+  border-style: solid;
+  border-width: 5px;
+  width: 100px;
+  height: 100px;
+}
+
+.button:active {
+  opacity: .7;
+}
+
+#rock {
+  background: url("rock.eb399147.jpg") center / contain no-repeat;
+}
+
+#paper {
+  background: url("paper.6b7f1113.jpg") center / contain no-repeat;
+}
+
+#scissors {
+  background: url("scissors.921cb07e.jpg") center / contain no-repeat;
+}
+/*# sourceMappingURL=againstai.acb727c0.css.map */
