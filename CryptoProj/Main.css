@@ -26,20 +26,20 @@ body
 }
 .button
 {
-    padding: 10px;
+    padding: 5px;
     border-color: black;
     border-style: solid;
     background: #b60b46;
     color: #ffffff;
     font-family: "Pixelify Sans";
     font-size: 25px;
-    display: flex;
+    display: table-cell;
     cursor: pointer;
     transition: background 0.5s, color 0.5s;
     margin: 10px;
     text-align: center;
     text-decoration: none;
-
+    width: 200px;
 }
 a{
     text-decoration: none;

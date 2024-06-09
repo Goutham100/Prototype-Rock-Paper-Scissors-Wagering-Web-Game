@@ -13,19 +13,26 @@ html
 
 .Heading {
     font-family: pixelated ;
-    font-size: 56px;
-    font-weight: bold;
+    font-size: 45px;
     color: #070707;
     text-align: center;
 }
 .body_font
 {
     font-family: pixelated ;
-    font-size: 26px;
+    font-size: 20px;
     font-weight: bold;
     color: #070707;
     text-align: center;
-    margin: 10px;
+    margin: 30px;
+}
+.body_fonts
+{
+    margin-top: 30px;
+}
+#resultdisplay
+{
+
 }
 body
 {
@@ -47,8 +54,12 @@ body
     border-style: solid;
     border-width: 5px;
     cursor: pointer;
-    
-
+    transition: height 0.5s, width 0.5s;
+}
+.button:hover
+{
+    height: 100px;
+    width: 100px;
 }
 
 .reload
@@ -57,6 +68,7 @@ body
     height: 50px;
     width: 50px;
     cursor: pointer;
+    margin-top: 20px;
 
 }
 

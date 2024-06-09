@@ -48,9 +48,12 @@ function playgame(playerchoice) {
     }
     playerdisplay.textContent = `Player: ${playerchoice}`;
     compdisplay.textContent = `Computer: ${compchoice}`;
-    playerscore.textContent = `${player_points}`;
-    compscore.textContent = `${comp_points}`;
+    playerscore.textContent = `Player: ${player_points}`;
+    compscore.textContent = `Computer: ${comp_points}`;
     if (player_points >= 3 || comp_points >= 3) resultdisplay.textContent = player_points > comp_points ? "Player Won" : "Computer Won";
+}
+function reloadPage() {
+    location.reload();
 }
 
 //# sourceMappingURL=againstai.dab3b204.js.map

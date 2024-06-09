@@ -29,13 +29,14 @@ body {
   background: #b60b46;
   border-style: solid;
   border-color: #000;
+  width: 200px;
   margin: 10px;
-  padding: 10px;
+  padding: 5px;
   font-family: Pixelify Sans;
   font-size: 25px;
   text-decoration: none;
   transition: background .5s, color .5s;
-  display: flex;
+  display: table-cell;
 }
 
 a {

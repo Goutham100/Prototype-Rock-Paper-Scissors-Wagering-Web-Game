@@ -1,9 +1,39 @@
 html {
-  background: linear-gradient(45deg, #2f1960, #851726);
+  width: 100%;
   height: 100%;
 }
 
+@font-face {
+  font-family: pixelated;
+  src: url("../pixelated.e20c8490.ttf");
+}
+
+.Heading {
+  color: #070707;
+  text-align: center;
+  font-family: pixelated;
+  font-size: 45px;
+}
+
+.body_font {
+  color: #070707;
+  text-align: center;
+  margin: 30px;
+  font-family: pixelated;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.body_fonts {
+  margin-top: 30px;
+}
+
 body {
+  background-image: url("../bgsas.7ca7c586.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   flex-direction: column;
   align-items: center;
   margin: auto;
@@ -11,10 +41,29 @@ body {
 }
 
 .button {
+  cursor: pointer;
   border-style: solid;
   border-width: 5px;
+  width: 200px;
+  height: 200px;
+  transition: height .5s, width .5s;
+}
+
+.button:hover {
   width: 100px;
   height: 100px;
+}
+
+.reload {
+  cursor: pointer;
+  border: none;
+  width: 50px;
+  height: 50px;
+  margin-top: 20px;
+}
+
+.reload:active {
+  opacity: .4;
 }
 
 .button:active {
@@ -31,5 +80,9 @@ body {
 
 #scissors {
   background: url("../scissors.921cb07e.jpg") center / contain no-repeat;
+}
+
+#reload {
+  background: url("../pixireload.5fb15ffd.png") center / contain no-repeat;
 }
 /*# sourceMappingURL=againstai.acb727c0.css.map */
