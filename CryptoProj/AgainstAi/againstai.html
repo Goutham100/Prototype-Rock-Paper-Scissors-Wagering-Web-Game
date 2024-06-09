@@ -6,6 +6,7 @@
 </head>
 <body>
     <link rel="stylesheet" href="againstai.css">
+    
 
     <h1 class="Heading">Rock Paper Scissors</h1>
     <div class="buttons">
@@ -13,11 +14,14 @@
         <button class="button" id="paper" onclick="playgame('paper')"></button>
         <button class="button" id="scissors" onclick="playgame('scissors')"></button>
     </div>
-    <div id="playerdisplay">Player:</div>
-    <div id="compdisplay">Computer:</div>
-    <div id="resultdisplay"></div>
-    <div id="playerscore">Player Score: </div>
-    <div id="compscore">Computer Score: </div>
+    <div class="body_font" id="playerdisplay">Player:</div>
+    <div class="body_font" id="compdisplay">Computer:</div>
+    <div class="body_font" id="resultdisplay"></div>
+    <div class="body_font" id="playerscore">Player Score:</div>
+    <div class="body_font" id="compscore">Computer Score:</div>
+    <div  
+        <button class="reload" id="reload" onclick="reloadPage()"></button>
+    </div>
     <script src="againstai.js"></script>
 </body>
 </html>
