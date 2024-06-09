@@ -27,12 +27,13 @@ body
 .button
 {
     padding: 10px;
-    border-color: black;
+    width: 200px;
+    border-color: #f5f3f4;
     border-style: solid;
     background: #b60b46;
     color: #ffffff;
     font-family: "Pixelify Sans";
-    font-size: 25px;
+    font-size: 20px;
     display: flex;
     cursor: pointer;
     transition: background 0.5s, color 0.5s;

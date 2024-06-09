@@ -18,11 +18,16 @@
 </div>
 
 <div class="buttons">
-    <button class="button" id="connect">Connect Wallet</button>
-    <button class="button" id="find">Find Players</button>
+    <button onmouseover="sound1.play()" class="button" id="connect">Connect Wallet</button>
+    <button onmouseover="sound1.play()" class="button" id="find">Find Players
+    </button>
     <a href="AgainstAi/againstai.html">
-        <button class="button" id="create">Play Against Ai</button>
+        <button onmouseover="sound1.play()" class="button" id="create">Play Against Ai</button>
     </a>
+    <script>
+        var sound1= new Audio();
+        sound1.src="sounds/buttonclick.mp3";
+    </script>
 </div>
 </body>
 </html>
