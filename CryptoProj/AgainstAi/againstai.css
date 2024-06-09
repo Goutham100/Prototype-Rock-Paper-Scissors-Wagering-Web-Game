@@ -1,23 +1,68 @@
 html
 {
     height: 100%;
-    background: linear-gradient(45deg, #2f1960, #851726);
+    width: 100%;
+    
 
+}
+
+@font-face {
+    font-family: pixelated ;
+    src: url('../fonts/pixelated.ttf');
+}
+
+.Heading {
+    font-family: pixelated ;
+    font-size: 56px;
+    font-weight: bold;
+    color: #070707;
+    text-align: center;
+}
+.body_font
+{
+    font-family: pixelated ;
+    font-size: 26px;
+    font-weight: bold;
+    color: #070707;
+    text-align: center;
+    margin: 10px;
 }
 body
 {
+    background-image: url('../img/bgsas.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .button
 {
-    height: 100px;
-    width: 100px;
+    height: 200px;
+    width: 200px;
     border-style: solid;
     border-width: 5px;
+    cursor: pointer;
+    
 
+}
+
+.reload
+{       
+    border: none;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+
+}
+
+.reload:active
+{
+    opacity: 40%;
 }
 .button:active
 {
@@ -39,3 +84,9 @@ body
     background:url("../img/scissors.jpg") no-repeat center center;
     background-size: contain;
 }
+#reload
+{
+    background:url("../img/pixireload.png") no-repeat center center;
+    background-size: contain;
+}
+    
