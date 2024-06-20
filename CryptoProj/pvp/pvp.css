@@ -1,0 +1,102 @@
+html
+{
+    height: 100%;
+    width: 100%;
+
+
+}
+
+@font-face {
+    font-family: pixelated ;
+    src: url('../fonts/pixelated.ttf');
+}
+
+.Heading {
+    font-family: pixelated ;
+    font-size: 45px;
+    color: #070707;
+    text-align: center;
+}
+.body_font
+{
+    font-family: pixelated ;
+    font-size: 20px;
+    font-weight: bold;
+    color: #070707;
+    text-align: center;
+    margin: 30px;
+}
+.body_fonts
+{
+    margin-top: 30px;
+}
+#resultdisplay
+{
+
+}
+body
+{
+    background-image: url('../img/bgsas.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button
+{
+    height: 200px;
+    width: 200px;
+    border-style: solid;
+    border-width: 5px;
+    cursor: pointer;
+    transition: height 0.5s, width 0.5s;
+}
+.button:hover
+{
+    height: 100px;
+    width: 100px;
+}
+.reload
+{
+    border: none;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    margin-top: 20px;
+
+}
+
+.reload:active
+{
+    opacity: 40%;
+}
+.button:active
+{
+    opacity: 0.7;
+}
+#rock
+{
+    background:url("../img/rock.jpg") no-repeat center center;
+    background-size: contain;
+
+}
+#paper
+{
+    background:url("../img/paper.jpg") no-repeat center center;
+    background-size: contain;
+}
+#scissors
+{
+    background:url("../img/scissors.jpg") no-repeat center center;
+    background-size: contain;
+}
+#reload
+{
+    background:url("../img/pixireload.png") no-repeat center center;
+    background-size: contain;
+}

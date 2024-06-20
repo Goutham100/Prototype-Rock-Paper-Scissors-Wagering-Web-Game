@@ -1,0 +1,88 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+
+@font-face {
+  font-family: pixelated;
+  src: url("pixelated.d9b31025.ttf");
+}
+
+.Heading {
+  color: #070707;
+  text-align: center;
+  font-family: pixelated;
+  font-size: 45px;
+}
+
+.body_font {
+  color: #070707;
+  text-align: center;
+  margin: 30px;
+  font-family: pixelated;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.body_fonts {
+  margin-top: 30px;
+}
+
+body {
+  background-image: url("bgsas.85afbec6.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  display: flex;
+}
+
+.button {
+  cursor: pointer;
+  border-style: solid;
+  border-width: 5px;
+  width: 200px;
+  height: 200px;
+  transition: height .5s, width .5s;
+}
+
+.button:hover {
+  width: 100px;
+  height: 100px;
+}
+
+.reload {
+  cursor: pointer;
+  border: none;
+  width: 50px;
+  height: 50px;
+  margin-top: 20px;
+}
+
+.reload:active {
+  opacity: .4;
+}
+
+.button:active {
+  opacity: .7;
+}
+
+#rock {
+  background: url("rock.9c2a39e2.jpg") center / contain no-repeat;
+}
+
+#paper {
+  background: url("paper.0c7ccef4.jpg") center / contain no-repeat;
+}
+
+#scissors {
+  background: url("scissors.c01877db.jpg") center / contain no-repeat;
+}
+
+#reload {
+  background: url("pixireload.7748d712.png") center / contain no-repeat;
+}
+/*# sourceMappingURL=pvp.e592315c.css.map */
