@@ -1,24 +1,12 @@
-html {
-  background: linear-gradient(45deg, #2f1960, #851726);
-  height: 100%;
-}
-
 body {
   flex-direction: column;
   align-items: center;
-  margin: auto;
   display: flex;
 }
 
-.Heading {
-  color: #fff;
-  margin: 50px;
-  font-family: Pixelify Sans;
-  font-size: 45px;
-}
-
-.buttons {
+#buttons {
   flex-direction: column;
+  padding-top: 15%;
   display: flex;
 }
 
@@ -32,15 +20,10 @@ body {
   width: 200px;
   margin: 10px;
   padding: 5px;
-  font-family: Pixelify Sans;
   font-size: 25px;
   text-decoration: none;
   transition: background .5s, color .5s;
   display: table-cell;
-}
-
-a {
-  text-decoration: none;
 }
 
 .button:hover {
@@ -48,20 +31,30 @@ a {
   background: #fff;
 }
 
-.button:active {
+.buttons:active {
   opacity: .6;
 }
 
-.images {
-  flex-direction: row;
-  justify-content: center;
-  display: flex;
+.hidden {
+  display: none;
 }
 
-.image {
-  border: 5px solid #000;
-  width: 15%;
-  height: 15%;
-  margin: 20px;
+#searchContainer {
+  background-color: #b60b46;
+  border-radius: 5px;
+  width: 300px;
+  height: 45px;
+  margin-top: 10px;
+  padding: 10px;
 }
-/*# sourceMappingURL=main.4809ea79.css.map */
+
+#searchBar {
+  box-sizing: border-box;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  font-size: 16px;
+}
+/*# sourceMappingURL=room.e0517896.css.map */

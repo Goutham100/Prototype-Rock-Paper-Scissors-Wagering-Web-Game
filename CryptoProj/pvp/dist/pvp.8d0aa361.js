@@ -13,15 +13,58 @@ const messageContainer = document.getElementById("players");
 let player_points = 0;
 let opp_points = 0;
 let player_id;
+const alphabets = [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "O",
+    "P",
+    "Q",
+    "R",
+    "S",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8"
+];
 const name = prompt("Enter your name");
+let roomId = localStorage.getItem("room_id");
+if (!roomId) {
+    roomId = "";
+    for(let i = 0; i < 5; i++){
+        let num = Math.floor(Math.random() * alphabets.length);
+        roomId += alphabets[num];
+    }
+    console.log("Generated new room_id:", roomId); // Debugging log
+}
+appendMessage(`Room-Id: ${roomId}`);
 appendMessage("You joined");
-socket.emit("new-user", name);
+socket.emit("join-room", roomId, name);
 socket.on("user-connected", (name)=>{
     appendMessage(`${name} connected`);
 });
 socket.on("assign-id", (id)=>{
     player_id = id;
 });
+function playgame(playerchoice) {
+    console.log(playerchoice);
+    socket.emit("start-game", roomId, playerchoice);
+}
 socket.on("game-result", (result)=>{
     if (result.winner === null) resultdisplay.textContent = "It's a tie";
     else if (result.winner === player_id) {
@@ -46,9 +89,6 @@ function appendMessage(message) {
     const messageElement = document.createElement("div");
     messageElement.innerText = message;
     messageContainer.append(messageElement);
-}
-function playgame(playerchoice) {
-    socket.emit("start-game", playerchoice);
 }
 function reloadPage() {
     location.reload();

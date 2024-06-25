@@ -1,44 +1,72 @@
-const io = require('socket.io')(3000)
-let users = {}
-let choices = {}
+const io = require('socket.io')(3000);
+let users = {};
+let choices = {};
+let roomUsers = [];
+
 io.on('connection', socket => {
-    socket.on('new-user', name => {
-        if (Object.keys(users).length < 2) {
-            users[socket.id] = name
-            socket.emit('assign-id', socket.id)                    //when users connect they print the names
-            socket.broadcast.emit('user-connected', name)
+    // Joining a room
+    socket.on('join-room', (roomId, name) => {
+        let temproom = io.sockets.adapter.rooms[roomId];
+
+        if (!temproom) {
+            socket.join(roomId);
+            users[socket.id] = { name, roomId };
+            socket.emit('assign-id', socket.id);
+            socket.to(roomId).emit('user-connected', name);
+            console.log(`users: ${JSON.stringify(users)}`);
+        } else {
+            let temp_roomUsers = Object.keys(temproom.sockets);
+            if (temp_roomUsers.length < 2) {
+                socket.join(roomId);
+                users[socket.id] = { name, roomId };
+                socket.emit('assign-id', socket.id);
+                socket.to(roomId).emit('user-connected', name);
+                console.log(`users: ${JSON.stringify(users)}`);
+            } else {
+                console.log(`${name} could not be joined`);
+            }
         }
-    })
+    });
 
-    socket.on('start-game', playerchoice => {
-        choices[socket.id] = playerchoice
-
-        if (Object.keys(choices).length === 2) {
-            const user_ids = Object.keys(choices)              // starts the game , send the infos to the determinewinner function
-                                                                         //   and gives back the results to the local script
-            const player1Choice = choices[user_ids[0]]
-            const player2Choice = choices[user_ids[1]]
-
-            const result = determineWinner(player1Choice, player2Choice, user_ids)
-            io.emit('game-result', result)
-
-                                                        // Reset choices for the next round
-            choices = {}
+    // Start the game
+    socket.on('start-game', (roomId, playerChoice) => {
+        if (!choices[roomId]) {
+            choices[roomId] = {};
         }
-    })
+        choices[roomId][socket.id] = playerChoice;
+        console.log(`playerChoice: ${socket.id} = ${playerChoice}`);
+        const room = io.sockets.adapter.rooms[roomId];
+        roomUsers = Object.keys(room.sockets);
+        console.log(`roomusers: ${roomUsers}`);
 
+        if (roomUsers.length === 2 && Object.keys(choices[roomId]).length === 2) {
+            const result = determineWinner(choices[roomId][roomUsers[0]], choices[roomId][roomUsers[1]], roomUsers);
+            io.to(roomId).emit('game-result', result);
+
+            // Reset choices for the next round
+            choices[roomId] = {};
+        }
+    });
+
+    // Disconnect event
     socket.on('disconnect', () => {
-        socket.broadcast.emit('user-disconnected', users[socket.id])
-        delete users[socket.id]                                                      //self-explanatory
-        delete choices[socket.id]
-    })
-})
+        const user = users[socket.id];
+        if (user) {
+            const roomId = user.roomId;
+            socket.to(roomId).emit('user-disconnected', user.name);
+            delete users[socket.id];
+            if (choices[roomId]) {
+                delete choices[roomId][socket.id];
+            }
+        }
+    });
+});
 
 function determineWinner(player1Choice, player2Choice, user_ids) {
     if (player1Choice === player2Choice) {
-        return { winner: null, player1Choice, player2Choice,players: user_ids };
+        return { winner: null, player1Choice, player2Choice, players: user_ids };
     } else if (
-        (player1Choice === 'rock' && player2Choice === 'scissors') ||                               //determines the winner
+        (player1Choice === 'rock' && player2Choice === 'scissors') ||
         (player1Choice === 'scissors' && player2Choice === 'paper') ||
         (player1Choice === 'paper' && player2Choice === 'rock')
     ) {
@@ -47,4 +75,6 @@ function determineWinner(player1Choice, player2Choice, user_ids) {
         return { winner: user_ids[1], player1Choice, player2Choice, players: user_ids };
     }
 }
+
+
 
