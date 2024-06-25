@@ -1,0 +1,74 @@
+body {
+  background: #0000000d;
+  place-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Nunito;
+  display: grid;
+}
+
+@font-face {
+  font-family: pixelated;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+.onboard-container {
+  text-align: center;
+  background: #fff;
+  border-radius: .7em;
+  min-width: 500px;
+  padding: 4em;
+  box-shadow: 10px 10px 30px #0000001a;
+}
+
+.onboard {
+  color: #fff;
+  text-align: center;
+  background-color: #b60b46;
+  border-radius: .3em;
+  margin-top: 2em;
+  padding: .7em;
+  font-size: 1.3rem;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.onboard2 {
+  color: #fff;
+  text-align: center;
+  background-color: #b60b46;
+  border-radius: .3em;
+  margin-top: 100px;
+  padding: .7em;
+  font-size: 1.3rem;
+  text-decoration: none;
+  display: inline-block;
+}
+
+p {
+  font-size: 1.125rem;
+}
+
+.account {
+  text-indent: 1.2em;
+  background: #e9e9e9;
+  border-radius: .3em;
+  padding: .3em;
+  display: inline-block;
+  position: relative;
+}
+
+.account:before {
+  content: "";
+  background: green;
+  border-radius: 50%;
+  width: .7em;
+  height: .7em;
+  position: absolute;
+  top: .6em;
+  left: .5em;
+}
+/*# sourceMappingURL=index.e5980c4e.css.map */

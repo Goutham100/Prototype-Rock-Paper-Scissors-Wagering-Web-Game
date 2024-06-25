@@ -50,7 +50,6 @@ if (!roomId) {
         let num = Math.floor(Math.random() * alphabets.length);
         roomId += alphabets[num];
     }
-    console.log("Generated new room_id:", roomId); // Debugging log
 }
 appendMessage(`Room-Id: ${roomId}`);
 appendMessage("You joined");

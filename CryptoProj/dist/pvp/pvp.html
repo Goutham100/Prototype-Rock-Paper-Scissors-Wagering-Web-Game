@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PvP</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script defer="" src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script defer="" src="/pvp/pvp.5346a525.js"></script>
+</head>
+<body>
+<link rel="stylesheet" href="/pvp/pvp.ad844457.css">
+<h1 class="Heading">Rock Paper Scissors</h1>
+<div id="players"></div>
+<div class="buttons">
+    <button class="button" id="rock" onclick="playgame('rock')"></button>
+    <button class="button" id="paper" onclick="playgame('paper')"></button>
+    <button class="button" id="scissors" onclick="playgame('scissors')"></button>
+</div>
+<div class="body_fonts">
+    <div class="body_font" id="playerdisplay">Player:</div>
+    <div class="body_font" id="opponentdisplay">opponent:</div>
+    <div class="body_font" id="resultdisplay"></div>
+    <div class="body_font" id="playerscore">Player Score:</div>
+    <div class="body_font" id="oppscore">Computer Score:</div>
+</div>
+
+<div>
+    <button class="reload" id="reload" onclick="reloadPage()"></button>
+</div>
+
+<script src="/pvp.d8835006.js"></script></body>
+</html>

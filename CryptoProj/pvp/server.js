@@ -34,7 +34,7 @@ io.on('connection', socket => {
             choices[roomId] = {};
         }
         choices[roomId][socket.id] = playerChoice;
-        console.log(`playerChoice: ${socket.id} = ${playerChoice}`);
+        console.log(choices);
         const room = io.sockets.adapter.rooms[roomId];
         roomUsers = Object.keys(room.sockets);
         console.log(`roomusers: ${roomUsers}`);
