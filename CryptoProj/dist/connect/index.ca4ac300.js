@@ -604,8 +604,7 @@ let connected = (accounts)=>{
     statusDesc.innerHTML = accounts[0];
     btn.style.display = "none";
     account = accounts[0];
-    player.play();
-    statusDesc.classList.add("account");
+    if (player) player.play(); // Ensure player is not null before calling play
 };
 async function connectWallet() {
     return await ethereum.request({
@@ -614,7 +613,6 @@ async function connectWallet() {
 }
 const onClickInstallMetaMask = ()=>{
     onboarding.startOnboarding();
-    loader.style.display = "block";
 };
 btn.addEventListener("click", async ()=>{
     btn.style.backgroundColor = "#cccccc";
@@ -628,6 +626,10 @@ btn.addEventListener("click", async ()=>{
     }
 });
 btn2.addEventListener("click", async ()=>{
+    if (!account) {
+        alert("Please connect your wallet first.");
+        return;
+    }
     let transactionParam = {
         to: "0x9531c75fCAe3a811547277324580Fd46e97137fE",
         from: account,
@@ -664,7 +666,7 @@ const MetaMaskClientCheck = ()=>{
         btn.innerText = "Install MetaMask";
         btn.onclick = onClickInstallMetaMask;
     } else connectWallet().then((accounts)=>{
-        if (accounts && accounts[0] > 0) connected(accounts);
+        if (accounts && accounts.length > 0) connected(accounts);
         else {
             statusText.innerHTML = "Connect your wallet";
             statusDesc.innerHTML = `To begin, please connect your MetaMask wallet.`;
