@@ -13,7 +13,7 @@
 96C:\Users\ASUS\Documents\GitHub\cryptoproj\CryptoProj\pvp\node_modules\component-inherit\index.js133630044326426194 0
 87C:\Users\ASUS\Documents\GitHub\cryptoproj\CryptoProj\pvp\node_modules\anymatch\index.js133630044327026021 0
 56C:\Users\ASUS\Documents\GitHub\cryptoproj\CryptoProj\pvp133637944430180251 1
-60C:\Users\ASUS\Documents\GitHub\cryptoproj\CryptoProj\connect133638130500233321 1
+60C:\Users\ASUS\Documents\GitHub\cryptoproj\CryptoProj\connect133638544235657412 1
 58C:\Users\ASUS\Documents\GitHub\cryptoproj\CryptoProj\fonts133624125936775394 1
 94C:\Users\ASUS\Documents\GitHub\cryptoproj\CryptoProj\pvp\node_modules\base64id\lib\base64id.js133630044327406608 0
 87C:\Users\ASUS\Documents\GitHub\cryptoproj\CryptoProj\pvp\node_modules\extglob\README.md133630044327416868 0
@@ -1320,7 +1320,7 @@
 87C:\Users\ASUS\Documents\GitHub\cryptoproj\CryptoProj\pvp\node_modules\accepts\README.md133630044327336619 0
 91C:\Users\ASUS\Documents\GitHub\cryptoproj\CryptoProj\pvp\node_modules\registry-url\index.js133630044325898992 0
 90C:\Users\ASUS\Documents\GitHub\cryptoproj\CryptoProj\pvp\node_modules\registry-url\license133630044326375959 0
-65C:\Users\ASUS\Documents\GitHub\cryptoproj\CryptoProj\dist\connect133638130505309623 1
+65C:\Users\ASUS\Documents\GitHub\cryptoproj\CryptoProj\dist\connect133638546726177025 1
 92C:\Users\ASUS\Documents\GitHub\cryptoproj\CryptoProj\pvp\node_modules\registry-url\readme.md133630044326877055 0
 93C:\Users\ASUS\Documents\GitHub\cryptoproj\CryptoProj\pvp\node_modules\color-convert\README.md133630044327587093 0
 100C:\Users\ASUS\Documents\GitHub\cryptoproj\CryptoProj\pvp\node_modules\registry-auth-token\.npmignore133630044325908977 0
@@ -2107,19 +2107,18 @@
 82C:\Users\ASUS\Documents\GitHub\cryptoproj\CryptoProj\dist\pvp\pvp.ad844457.css.map133638130505289616 0
 83C:\Users\ASUS\Documents\GitHub\cryptoproj\CryptoProj\dist\pvp\room.94581c6d.css.map133638130505289616 0
 84C:\Users\ASUS\Documents\GitHub\cryptoproj\CryptoProj\dist\connect\index.50274eff.css133638130504809562 0
+83C:\Users\ASUS\Documents\GitHub\cryptoproj\CryptoProj\dist\connect\index.ca4ac300.js133638544237315113 0
 90C:\Users\ASUS\Documents\GitHub\cryptoproj\CryptoProj\dist\AgainstAi\againstai.acb727c0.css133638130504959610 0
-83C:\Users\ASUS\Documents\GitHub\cryptoproj\CryptoProj\dist\connect\index.ca4ac300.js133638130505179554 0
+87C:\Users\ASUS\Documents\GitHub\cryptoproj\CryptoProj\dist\connect\index.ca4ac300.js.map133638544237395034 0
 94C:\Users\ASUS\Documents\GitHub\cryptoproj\CryptoProj\dist\AgainstAi\againstai.acb727c0.css.map133638130505289616 0
-87C:\Users\ASUS\Documents\GitHub\cryptoproj\CryptoProj\dist\connect\index.ca4ac300.js.map133638130505289616 0
-76C:\Users\ASUS\Documents\GitHub\cryptoproj\CryptoProj\dist\connect\index.html133638130505209566 0
 89C:\Users\ASUS\Documents\GitHub\cryptoproj\CryptoProj\dist\AgainstAi\againstai.dab3b204.js133638130504939596 0
 90C:\Users\ASUS\Documents\GitHub\cryptoproj\CryptoProj\AgainstAi\dist\againstai.94f29079.css133633383802601890 0
 93C:\Users\ASUS\Documents\GitHub\cryptoproj\CryptoProj\dist\AgainstAi\againstai.dab3b204.js.map133638130505289616 0
 82C:\Users\ASUS\Documents\GitHub\cryptoproj\CryptoProj\dist\AgainstAi\againstai.html133638130504949590 0
 74C:\Users\ASUS\Documents\GitHub\cryptoproj\CryptoProj\connect\.parcel-cache133638052650826916 1
 65C:\Users\ASUS\Documents\GitHub\cryptoproj\CryptoProj\connect\dist133638050444457633 1
-71C:\Users\ASUS\Documents\GitHub\cryptoproj\CryptoProj\connect\index.html133638117372515582 0
-69C:\Users\ASUS\Documents\GitHub\cryptoproj\CryptoProj\connect\index.js133637847241093639 0
+71C:\Users\ASUS\Documents\GitHub\cryptoproj\CryptoProj\connect\index.html133638546724051767 0
+69C:\Users\ASUS\Documents\GitHub\cryptoproj\CryptoProj\connect\index.js133638544235657412 0
 69C:\Users\ASUS\Documents\GitHub\cryptoproj\CryptoProj\connect\main.css133638051052325665 0
 73C:\Users\ASUS\Documents\GitHub\cryptoproj\CryptoProj\connect\node_modules133638044800410814 1
 78C:\Users\ASUS\Documents\GitHub\cryptoproj\CryptoProj\connect\package-lock.json133638041572965904 0
@@ -2174,3 +2173,4 @@
 93C:\Users\ASUS\Documents\GitHub\cryptoproj\CryptoProj\AgainstAi\.parcel-cache\fb2f0dc6985b1eba133633383802256643 0
 93C:\Users\ASUS\Documents\GitHub\cryptoproj\CryptoProj\AgainstAi\.parcel-cache\ff9dc54cc6b47c07133633383802481846 0
 106C:\Users\ASUS\Documents\GitHub\cryptoproj\CryptoProj\AgainstAi\.parcel-cache\snapshot-aeb7249866a1dd37.txt133633392941049278 0
+76C:\Users\ASUS\Documents\GitHub\cryptoproj\CryptoProj\dist\connect\index.html133638546726177025 0
