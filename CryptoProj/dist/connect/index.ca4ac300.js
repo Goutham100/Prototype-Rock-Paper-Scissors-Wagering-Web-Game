@@ -598,6 +598,7 @@ const isMetaMaskInstalled = ()=>{
     return Boolean(ethereum1 && ethereum1.isMetaMask);
 };
 let account;
+localStorage.setItem("account", account);
 let connected = (accounts)=>{
     statusText.innerHTML = "Connected!";
     statusDesc.classList.add("account");
