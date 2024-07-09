@@ -1,7 +1,7 @@
 const io = require('socket.io')(3000);
 let users = {};
 let choices = {};
-let roomUsers = [];
+let roomUsers = {};
 
 io.on('connection', socket => {
     // Joining a room
@@ -13,6 +13,8 @@ io.on('connection', socket => {
             users[socket.id] = { name, roomId };
             socket.emit('assign-id', socket.id);
             socket.to(roomId).emit('user-connected', name);
+            roomUsers[roomId] = [socket.id];
+            socket.emit('roomusers', roomUsers[roomId]);
             console.log(`users: ${JSON.stringify(users)}`);
         } else {
             let temp_roomUsers = Object.keys(temproom.sockets);
@@ -21,7 +23,14 @@ io.on('connection', socket => {
                 users[socket.id] = { name, roomId };
                 socket.emit('assign-id', socket.id);
                 socket.to(roomId).emit('user-connected', name);
+                roomUsers[roomId].push(socket.id);
+                socket.emit('roomusers', roomUsers[roomId]);
                 console.log(`users: ${JSON.stringify(users)}`);
+
+                // Start game if two users are present
+                if (roomUsers[roomId].length === 2) {
+                    io.to(roomId).emit('start-round');
+                }
             } else {
                 console.log(`${name} could not be joined`);
             }
@@ -36,15 +45,18 @@ io.on('connection', socket => {
         choices[roomId][socket.id] = playerChoice;
         console.log(choices);
         const room = io.sockets.adapter.rooms[roomId];
-        roomUsers = Object.keys(room.sockets);
-        console.log(`roomusers: ${roomUsers}`);
+        roomUsers[roomId] = Object.keys(room.sockets);
+        console.log(`roomusers: ${roomUsers[roomId]}`);
 
-        if (roomUsers.length === 2 && Object.keys(choices[roomId]).length === 2) {
-            const result = determineWinner(choices[roomId][roomUsers[0]], choices[roomId][roomUsers[1]], roomUsers);
+        if (roomUsers[roomId].length === 2 && Object.keys(choices[roomId]).length === 2) {
+            const result = determineWinner(choices[roomId][roomUsers[roomId][0]], choices[roomId][roomUsers[roomId][1]], roomUsers[roomId]);
             io.to(roomId).emit('game-result', result);
 
             // Reset choices for the next round
             choices[roomId] = {};
+
+            // Clear roomUsers after the match
+            roomUsers[roomId] = [];
         }
     });
 
@@ -57,6 +69,9 @@ io.on('connection', socket => {
             delete users[socket.id];
             if (choices[roomId]) {
                 delete choices[roomId][socket.id];
+            }
+            if (roomUsers[roomId]) {
+                roomUsers[roomId] = roomUsers[roomId].filter(id => id !== socket.id);
             }
         }
     });
@@ -75,6 +90,3 @@ function determineWinner(player1Choice, player2Choice, user_ids) {
         return { winner: user_ids[1], player1Choice, player2Choice, players: user_ids };
     }
 }
-
-
-
